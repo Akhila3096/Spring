@@ -1,0 +1,199 @@
+technology - group of languages.
+
+library - set of functions. It doesn't have its own environment.
+
+framework doesn't depend on any language. It has its own environment.
+
+
+
+
+SPRING:
+-------
+
+Why Spring?
+----------
+
+To build light-weight applications with single setup and with less configurations we need Spring.
+
+What is a Spring?
+-----------------
+
+Spring is a framework which contains various modules such as
+
+-> *Spring Core(IoC) - for stand-alone applications
+-> *Spring MVC
+-> Spring JDBC API
+-> Spring EJB
+-> Spring AOP
+-> *Spring Data
+-> *Spring REST
+-> *Spring Boot
+
+Spring 5.0 is the latest version of spring.
+
+
+
+
+Spring Core(IoC) (Inversion of Control):
+---------------------------------------
+
+-> It provides Java environment and is used for stand-alone applications.
+-> It has a container called Spring Core container or IoC container. 
+Each container has its own life-cycle. Life-cycle methods - init and destroy.
+-> It creates only one instance for entire application.
+Dependancy Injection: Objects are the dependancies in Spring Core and we inject it.
+Loosely Coupled: Reducing the dependancy between classes.
+
+Steps to create Spring Core Application:
+
+1) Bean
+2) Configuration File - contains all beans declarations. Extension is .xml
+3) Inject Dependancies
+
+Maven is a build tool used to create any applications.
+
+Group Id - package name
+Artifact Id - project name
+
+pom.xml(project object model) - It has dependancies and Maven downloads the jar files for dependancies.
+
+
+Scope:
+------
+
+-> singleton - single instance for entire application
+-> prototype
+-> session
+-> request
+-> global session
+
+
+Ways to inject data of bean in class:
+-------------------------------------
+
+-> Constructor type injection
+-> Setter type injection
+
+
+Lifecycle of Spring-Core container:
+-----------------------------------
+
+Option - 1: implementing life cycle interfaces and overriding afterPropertiesSet() and 
+            destroy()
+
+Option - 2: using annotations
+            @PostConstruct
+            @PreDestroy
+
+Option - 3: using attributes of bean in xml
+            init method
+            destroy method
+
+
+Autowiring:
+-----------
+
+For linking one bean to another bean.
+
+Values of autowire:
+
+autowire = default or no
+autowire = "byName" (checks property name)
+autowire = "byType" (checks reference)
+autowire = "constructor"
+
+Annotation - @autowired
+
+
+Collection mapping to a bean:
+-----------------------------
+
+list
+set
+map
+
+
+
+
+
+
+
+
+SPRING MVC:
+-----------
+
+Presentation:                       
+
+
+Controller:
+           
+-> Controller handles the requests.
+-> @Controller is used to marks class as controller.
+-> DispatcherServlet is the controller. It works as front control and manages flow of MVC application.
+
+
+Model:
+
+-> Service:
+   - Service layer interacts eith the databse through DAO.
+   - @Service is used to define service layer.
+
+-> DAO:
+   - @Repository is used to define DAO Layer.
+
+
+Dependancies for MVC architecture:
+----------------------------------
+
+-> Spring-web for web applications
+-> Spring-webMVC for MVC applications
+
+
+
+
+
+
+
+
+SPRING WEB FORMS:
+-----------------
+Task:
+employee
+-showall(tabular format)
+-update for given id
+-delete for given id
+-search
+
+
+id,name,salary,mailid
+
+
+
+
+
+
+
+
+SPRING BOOT:
+------------
+
+-> Spring boot is used to develop spring based applications.
+
+
+4 ways to create spring boot application.
+
+-> Spring starter project
+-> Spring Boot CLI (Command Line Interface)
+-> Spring IO 
+-> Maven
+
+
+
+interface-repo-getAllProducts
+
+
+bean-product service repo
+
+
+
+
